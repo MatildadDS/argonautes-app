@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/api/get',(req, res) => {
-    const sqlSelect = `SELECT * FROM argos;`
+    const sqlSelect = `SELECT * FROM argos LIMIT 50;`
     db.query(sqlSelect, (err, result) => {
         res.send(result)
     });
