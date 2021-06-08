@@ -11,7 +11,6 @@ function App() {
 
   useEffect(() => {
     Axios.get("http://localhost:3005/api/get").then((response) => {
-      for(let i = 0; i < 50 ; i++)
       setArgoList(response.data);
     });
   }, [])
